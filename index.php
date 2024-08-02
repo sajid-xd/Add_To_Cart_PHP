@@ -1,5 +1,6 @@
 <?php
 include "header.php";
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,9 @@ include "header.php";
       <title>Cards</title>
    </head>
    <body>
+
+
+
       <div class="container mt-5">
          <div class="row">
             <div class="col-lg-3">
