@@ -1,6 +1,4 @@
-<?php include "header.php"; 
-   session_start();
-   ?>
+<?php include "header.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -32,10 +30,11 @@
                         {
                          foreach($_SESSION['cart'] as $key => $value)
                          {
+                           $sr=$key+1;
                           $total=$total+$value['Price'];
                           echo"
                           <tr>
-                          <td>1</td>
+                          <td>$sr</td>
                           <td>$value[Item_Name]</td>
                           <td>$value[Price]</td>
                           <td><input type='number' value='$value[Quantity]' min='1' max='10'></td>
@@ -58,13 +57,13 @@
               <br>
               <form>
               <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
                        <label class="form-check-label" for="flexRadioDefault1">
     Cash On Delivery
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
   <label class="form-check-label" for="flexRadioDefault2">
   Delivery On Cash
   </label>
